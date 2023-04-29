@@ -3,7 +3,6 @@ package com.syco.deepslatetweaks.registry;
 import com.syco.deepslatetweaks.DeepslateTweaks;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -40,9 +39,9 @@ public class CustomRegistryHandler {
 
         event.register(ForgeRegistries.Keys.ITEMS, helper -> {
 
-            helper.register(new ResourceLocation("minecraft", "deepslate"), new BlockItem(DEEPSLATE_BLOCK, new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
+            helper.register(new ResourceLocation("minecraft", "deepslate"), new BlockItem(DEEPSLATE_BLOCK, new Item.Properties()));
 
-            helper.register(new ResourceLocation("minecraft", "cobbled_deepslate"), new BlockItem(COBBLED_DEEPSLATE_BLOCK, new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)));
+            helper.register(new ResourceLocation("minecraft", "cobbled_deepslate"), new BlockItem(COBBLED_DEEPSLATE_BLOCK, new Item.Properties()));
 
         });
     }

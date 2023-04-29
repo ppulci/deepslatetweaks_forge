@@ -16,9 +16,7 @@ public class DeepslateTweaks
     public DeepslateTweaks()
     {
         FMLJavaModLoadingContext.get().getModEventBus();
-
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
-
         MinecraftForge.EVENT_BUS.register(this);
     }
 
