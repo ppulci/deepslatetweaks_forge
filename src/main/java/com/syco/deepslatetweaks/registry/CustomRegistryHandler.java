@@ -17,8 +17,8 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ObjectHolder;
 
 @Mod.EventBusSubscriber(modid = DeepslateTweaks.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
-public class CustomRegistryHandler{
-
+public class CustomRegistryHandler
+{
     //REGISTERING ALL BLOCKS
     @ObjectHolder("minecraft:deepslate")
     public static final Block DEEPSLATE_BLOCK = null;
@@ -28,10 +28,13 @@ public class CustomRegistryHandler{
 
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event) {
-        event.getRegistry().registerAll(
-                new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.DEEPSLATE).requiresCorrectToolForDrops().strength(1.5F, 6.0F).sound(SoundType.DEEPSLATE)).setRegistryName("minecraft:deepslate"),
-                new Block(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE).strength(1.5F, 6.0F)).setRegistryName("minecraft:cobbled_deepslate")
-        );
+        //event.getRegistry().registerAll(
+                //new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.DEEPSLATE).requiresCorrectToolForDrops().strength(1.5F, 6.0F).sound(SoundType.DEEPSLATE)).setRegistryName("minecraft:deepslate")
+                //,
+                //new Block(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE).strength(1.5F, 6.0F)).setRegistryName("minecraft:cobbled_deepslate")
+        //);
+        //event.getRegistry().register(new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.DEEPSLATE).requiresCorrectToolForDrops().strength(1.5F, 6.0F).sound(SoundType.DEEPSLATE)).setRegistryName("minecraft:deepslate"));
+        //event.getRegistry().register(new Block(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE).strength(1.5F, 6.0F)).setRegistryName("minecraft:cobbled_deepslate"));
     }
 
     //REGISTERING ALL ITEMS
