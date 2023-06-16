@@ -9,8 +9,8 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.material.Material;
-import net.minecraft.world.level.material.MaterialColor;
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
+import net.minecraft.world.level.material.MapColor;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegisterEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -31,7 +31,7 @@ public class CustomRegistryHandler {
     public static void registerBlocks(RegisterEvent event) {
         event.register(ForgeRegistries.Keys.BLOCKS, helper -> {
 
-            helper.register(new ResourceLocation("minecraft", "deepslate"), new RotatedPillarBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.DEEPSLATE).requiresCorrectToolForDrops().strength(1.5F, 6.0F).sound(SoundType.DEEPSLATE)));
+            helper.register(new ResourceLocation("minecraft", "deepslate"), new RotatedPillarBlock(BlockBehaviour.Properties.of().mapColor(MapColor.DEEPSLATE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F).sound(SoundType.DEEPSLATE)));
 
             helper.register(new ResourceLocation("minecraft", "cobbled_deepslate"), new Block(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE).strength(1.5F, 6.0F)));
 
