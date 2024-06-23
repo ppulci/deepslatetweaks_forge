@@ -33,7 +33,7 @@ public class CustomRegistryHandler {
 
             helper.register(new ResourceLocation("minecraft", "deepslate"), new RotatedPillarBlock(BlockBehaviour.Properties.of().mapColor(MapColor.DEEPSLATE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F).sound(SoundType.DEEPSLATE)));
 
-            helper.register(new ResourceLocation("minecraft", "cobbled_deepslate"), new Block(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE).strength(1.5F, 6.0F)));
+            helper.register(new ResourceLocation("minecraft", "cobbled_deepslate"), new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE).strength(1.5F, 6.0F)));
 
         });
 
