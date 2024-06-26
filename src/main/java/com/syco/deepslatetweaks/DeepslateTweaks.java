@@ -22,6 +22,6 @@ public class DeepslateTweaks
 
     private void setup(final FMLCommonSetupEvent event)
     {
-        LOGGER.info("DEEPSLATE TWEAKS");
+        LOGGER.info("DEEPSLATE TWEAKS!");
     }
 }
