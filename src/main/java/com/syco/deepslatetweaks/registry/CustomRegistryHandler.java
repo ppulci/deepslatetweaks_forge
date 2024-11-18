@@ -31,17 +31,28 @@ public class CustomRegistryHandler {
     public static void registerBlocks(RegisterEvent event) {
         event.register(ForgeRegistries.Keys.BLOCKS, helper -> {
 
-            helper.register(new ResourceLocation("minecraft", "deepslate"), new RotatedPillarBlock(BlockBehaviour.Properties.of().mapColor(MapColor.DEEPSLATE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(1.5F, 6.0F).sound(SoundType.DEEPSLATE)));
+            helper.register(
+                    ResourceLocation.tryParse("minecraft:deepslate"),
+                    new RotatedPillarBlock(BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.DEEPSLATE)
+                            .instrument(NoteBlockInstrument.BASEDRUM)
+                            .requiresCorrectToolForDrops()
+                            .strength(1.5F, 6.0F)
+                            .sound(SoundType.DEEPSLATE))
+            );
 
-            helper.register(new ResourceLocation("minecraft", "cobbled_deepslate"), new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE).strength(1.5F, 6.0F)));
+            //.register(new ResourceLocation("minecraft", "cobbled_deepslate"), new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE).strength(1.5F, 6.0F)));
 
         });
 
         event.register(ForgeRegistries.Keys.ITEMS, helper -> {
 
-            helper.register(new ResourceLocation("minecraft", "deepslate"), new BlockItem(DEEPSLATE_BLOCK, new Item.Properties()));
+            helper.register(
+                    ResourceLocation.tryParse("minecraft:deepslate"),
+                    new BlockItem(Blocks.DEEPSLATE, new Item.Properties())
+            );
 
-            helper.register(new ResourceLocation("minecraft", "cobbled_deepslate"), new BlockItem(COBBLED_DEEPSLATE_BLOCK, new Item.Properties()));
+            //helper.register(new ResourceLocation("minecraft", "cobbled_deepslate"), new BlockItem(COBBLED_DEEPSLATE_BLOCK, new Item.Properties()));
 
         });
     }
