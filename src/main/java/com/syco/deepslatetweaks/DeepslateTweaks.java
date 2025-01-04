@@ -17,12 +17,12 @@ public class DeepslateTweaks
     public DeepslateTweaks()
     {
         LOGGER.info("Deepslate Tweaks Mod Initializing"); // Initialization log
-        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-        modEventBus.addListener(this::setup);
+//        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+//        modEventBus.addListener(this::setup);
         MinecraftForge.EVENT_BUS.register(this);
 
-        FMLJavaModLoadingContext.get().getModEventBus();
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
+//        FMLJavaModLoadingContext.get().getModEventBus();
+//        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         MinecraftForge.EVENT_BUS.register(this);
     }
 
