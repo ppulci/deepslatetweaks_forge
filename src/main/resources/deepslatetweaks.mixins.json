@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.syco.deepslatetweaks.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "refmap": "deepslatetweaks.refmap.json",
+  "mixins": [
+    "BlocksMixin"
+  ],
+  "client": [],
+  "server": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

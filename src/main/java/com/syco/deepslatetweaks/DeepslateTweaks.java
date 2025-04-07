@@ -16,18 +16,12 @@ public class DeepslateTweaks
 
     public DeepslateTweaks()
     {
-        LOGGER.info("Deepslate Tweaks Mod Initializing"); // Initialization log
-//        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-//        modEventBus.addListener(this::setup);
-        MinecraftForge.EVENT_BUS.register(this);
-
-//        FMLJavaModLoadingContext.get().getModEventBus();
-//        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
+        LOGGER.info("Deepslate Tweaks Mod Initializing");
         MinecraftForge.EVENT_BUS.register(this);
     }
 
     private void setup(final FMLCommonSetupEvent event)
     {
-        LOGGER.info("DEEPSLATE TWEAKS");
+        LOGGER.info("Deepslate Tweaks Mod Setup");
     }
 }
