@@ -112,9 +112,9 @@ mixin {
     add sourceSets.main, 'deepslatetweaks.refmap.json'  // Refmap for main source set
 
     // Debug settings for development
-    debug.verbose = true
-    debug.export = true
-    dumpTargetOnFailure = true
+//    debug.verbose = true
+//    debug.export = true
+//    dumpTargetOnFailure = true
 }
 
 
