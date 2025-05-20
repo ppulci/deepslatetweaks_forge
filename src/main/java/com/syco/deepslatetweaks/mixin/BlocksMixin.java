@@ -1,14 +1,22 @@
 package com.syco.deepslatetweaks.mixin;
 
 import net.minecraft.world.level.block.Blocks;
+import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.ModifyArgs;
 import org.spongepowered.asm.mixin.injection.Slice;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import org.spongepowered.asm.mixin.injection.invoke.arg.Args;
 
 @Mixin(Blocks.class)
 public class BlocksMixin {
+
     // Modify Deepslate block strength
     @ModifyArgs(
             method = "<clinit>",
@@ -27,6 +35,12 @@ public class BlocksMixin {
         // Set hardness to 1.5F (like stone) and keep resistance at 6.0F
         args.set(0, 1.5F);
         args.set(1, 6.0F);
+    }
+
+    // Or as a quick test:
+    @Inject(method = "<clinit>", at = @At("HEAD"))
+    private static void testClinit(CallbackInfo ci) {
+        System.out.println("Blocks <clinit> initialized!");
     }
 
     // Modify Cobbled Deepslate block strength
@@ -48,9 +62,6 @@ public class BlocksMixin {
         args.set(0, 2.0F);
         args.set(1, 6.0F);
     }
-
-
-
 
     // Redirect the Deepslate Gold Ore registry
     @ModifyArgs(
