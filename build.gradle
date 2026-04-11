@@ -10,7 +10,7 @@ version = mod_version
 group = mod_group_id
 
 base {
-    archivesName = mod_id
+    archivesName = mod_id + "_forge"
 }
 
 // Mojang ships Java 21 to end users in 1.20.5+, so your mod should target Java 21.
@@ -131,7 +131,7 @@ mixin {
 
     // Debug settings for development
 //    debug.verbose = true
-//    debug.export = true
+//    debug.export = truell
 //    dumpTargetOnFailure = true
 }
 
